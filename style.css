@@ -1,0 +1,316 @@
+body {
+    font-family: 'Roboto', 'Google Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #fff;
+    color: #202124;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.signin-box {
+    background-color: #fff;
+    padding: 48px 40px 36px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 448px; /* Adjusted max-width slightly to match image better */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.logo {
+    width: 75px;
+    height: auto;
+    margin-bottom: 16px; /* Reduced margin for "Sign in" title */
+}
+
+.title-text {
+    font-family: 'Google Sans', 'Roboto', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 400; /* Google uses a lighter weight for "Sign in" */
+    color: #202124;
+    margin-top: 0; /* Reset margin */
+    margin-bottom: 8px;
+    line-height: 1.3333;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #202124;
+    margin-top: 0;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 4px; /* Small gap before forgot link */
+    text-align: left;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 13px 15px;
+    font-size: 16px;
+    border: 1px solid #dadce0; /* Lighter border color for input */
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    background-color: #fff;
+    height: 56px; /* Explicit height for input fields */
+}
+.input-group input:focus {
+    border-color: #1a73e8;
+    border-width: 2px; /* Border becomes 2px on focus */
+    padding: 12px 14px; /* Adjust padding to account for thicker border */
+    box-shadow: none; /* Remove default box-shadow from some browsers */
+}
+
+.input-group label {
+    position: absolute;
+    left: 16px;
+    top: 17px; /* Vertically center in 56px input */
+    font-size: 16px;
+    color: #5f6368;
+    pointer-events: none;
+    transition: all 0.15s cubic-bezier(0.4,0,0.2,1);
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -9px; /* Adjusted for 2px border */
+    left: 12px;
+    font-size: 12px;
+    color: #1a73e8;
+    background-color: #fff;
+    padding: 0 4px;
+}
+.input-group input:not(:placeholder-shown):not(:focus) + label {
+    color: #5f6368; /* Keep grey if filled but not focused */
+}
+
+.forgot-link {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500; /* 'Google Sans Medium' equivalent */
+    margin-top: 8px; /* Space above the link */
+    margin-bottom: 24px;
+    padding: 3px 2px; /* Small padding to match visual */
+    border-radius: 4px; /* Rounded corners on focus/hover */
+}
+.forgot-link:hover, .forgot-link:focus {
+    background-color: rgba(26,115,232,0.06);
+    text-decoration: none; /* Google often removes underline on hover for these */
+    outline: none;
+}
+
+.guest-mode-info {
+    font-size: 14px;
+    color: #5f6368; /* Changed to match image */
+    text-align: left;
+    margin-top: 32px; /* More space above */
+    margin-bottom: 32px;
+    line-height: 1.4286;
+}
+.guest-mode-info a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+}
+.guest-mode-info a:hover {
+    text-decoration: underline;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px; /* Space above actions */
+}
+
+.create-account-link {
+    font-size: 14px;
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 7px 15px; /* Button-like padding */
+    border-radius: 4px;
+    transition: background-color 0.1s ease-in-out;
+}
+.create-account-link:hover, .create-account-link:focus {
+    background-color: rgba(26,115,232,0.06);
+    text-decoration: none;
+    outline: none;
+}
+
+.next-button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 0 24px; /* Padding horizontal */
+    height: 36px; /* Specific height */
+    line-height: 36px; /* Vertically center text */
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+.next-button:hover {
+    background-color: #1765cc;
+    box-shadow: 0 1px 2px 0 rgba(66,133,244,0.3), 0 1px 3px 1px rgba(66,133,244,0.15);
+}
+.next-button:focus {
+    outline: none; /* Custom focus or rely on browser default for accessibility */
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #1a73e8; /* Example focus ring */
+}
+
+/* --- Password Step Specific Styles --- */
+#password-step .title-text {
+    margin-bottom: 24px; /* More space after "Welcome" */
+}
+.user-identifier-chip {
+    display: inline-flex; /* Use inline-flex for items to sit side-by-side */
+    align-items: center;
+    border: 1px solid #dadce0;
+    border-radius: 16px; /* Pill shape */
+    padding: 4px 12px 4px 8px; /* Adjust padding */
+    font-size: 14px;
+    color: #3c4043;
+    margin-bottom: 32px; /* Space below chip */
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+.user-identifier-chip:hover, .user-identifier-chip:focus {
+    background-color: rgba(0,0,0,0.04);
+    outline: none;
+}
+.user-identifier-chip .user-icon {
+    font-size: 18px;
+    color: #5f6368;
+    margin-right: 8px;
+}
+.user-identifier-chip .dropdown-icon {
+    font-size: 20px;
+    color: #5f6368;
+    margin-left: 8px;
+}
+#password-step .input-group {
+    margin-bottom: 16px; /* Space before show password */
+}
+.show-password-container {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 24px; /* Space before forgot password/next */
+}
+.show-password-container input[type="checkbox"] {
+    margin-right: 8px;
+    width: 18px; /* Custom size for checkbox */
+    height: 18px;
+    accent-color: #1a73e8; /* Color the checkbox when checked */
+    cursor: pointer;
+}
+.show-password-container label {
+    font-size: 14px;
+    color: #202124;
+    cursor: pointer;
+}
+#password-step .actions {
+    margin-top: 16px; /* Less margin for password step actions */
+}
+#password-step .forgot-link {
+    margin-right: auto; /* Push "Next" button to the right */
+    margin-bottom: 0; /* No bottom margin if it's in .actions flex */
+}
+
+/* --- Footer --- */
+.footer-links {
+    margin-top: 24px;
+    width: 100%;
+    max-width: 448px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+
+#language-select {
+    font-size: 12px;
+    color: #3c4043; /* Slightly darker than typical links */
+    border: none;
+    background-color: transparent;
+    padding: 8px 4px;
+    cursor: pointer;
+    font-family: 'Roboto', Arial, sans-serif; /* Ensure font consistency */
+}
+#language-select:hover {
+    background-color: rgba(0,0,0,0.03);
+    border-radius: 2px;
+}
+
+.footer-links .right-links a {
+    font-size: 12px;
+    color: #5f6368;
+    text-decoration: none;
+    margin-left: 24px;
+    padding: 8px 4px;
+}
+.footer-links .right-links a:hover {
+    text-decoration: none;
+    color: #202124;
+    background-color: rgba(0,0,0,0.03);
+    border-radius: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    body {
+        background-color: #fff; /* Ensure white background on mobile */
+        align-items: flex-start; /* Align content to top on mobile */
+        padding-top: 16px; /* Some top padding */
+    }
+    .container {
+        padding: 0;
+    }
+    .signin-box {
+        border: none;
+        box-shadow: none;
+        padding: 24px 24px 36px; /* Adjust padding for mobile */
+        max-width: 100%;
+        border-radius: 0;
+    }
+    .logo {
+        margin-left: -4px; /* Align logo with text on mobile */
+    }
+    .footer-links {
+        padding: 16px 24px; /* Padding for footer on mobile */
+        max-width: 100%;
+        flex-wrap: wrap; /* Allow wrapping if needed */
+    }
+    #language-select {
+        margin-right: auto; /* Pushes right links to the end of the line */
+        margin-bottom: 8px; /* If it wraps */
+    }
+    .footer-links .right-links {
+        margin-left: auto; /* Push to right */
+    }
+    .footer-links .right-links a {
+        margin-left: 16px; /* Adjust spacing */
+    }
+}
