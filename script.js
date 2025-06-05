@@ -1,11 +1,12 @@
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyC8tojtuCHSgSY3jdrbal8BH4cq1UU1KLI",
+  authDomain: "idkbruh-c8cb4.firebaseapp.com",
+  projectId: "idkbruh-c8cb4",
+  storageBucket: "idkbruh-c8cb4.firebasestorage.app",
+  messagingSenderId: "155774984997",
+  appId: "1:155774984997:web:5ddc18b335e3cb7c80b0cc",
+  measurementId: "G-92XKJRD79B"
 };
 
 // Initialize Firebase
